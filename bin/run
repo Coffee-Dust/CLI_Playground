@@ -19,7 +19,6 @@ puts '
  \____________________/ '
 puts "What would you like to play!"
 puts "Use 'list' to display all commands"
-puts "LOL FROM GITHUB!!"
 
 def input_safe?(input)
   methods = Methods.new
