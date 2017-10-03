@@ -1,0 +1,53 @@
+#!/usr/bin/env ruby
+require_relative '../lib/methods.rb'
+require 'thread'
+
+puts "Welcome to the Playground!"
+puts '
+   +--------------+
+   |.------------.|
+   ||            ||
+   ||            ||
+   ||            ||
+   ||            ||
+   |+------------+|
+   +-..--------..-+
+   .--------------.
+   / /============\ \\
+  / /==============\ \\
+ /____________________\\
+ \____________________/ '
+puts "What would you like to play!"
+puts "Use 'list' to display all commands"
+
+def input_safe?(input)
+  methods = Methods.new
+  begin
+    methods.send(input)
+  rescue NoMethodError
+    return false
+  end
+  return true
+
+end
+
+def get_input
+  input = gets.strip
+  methods = Methods.new
+  if input_safe?(input)
+    get_input
+  else
+    puts "
+         _______
+        |.-----.|
+        ||x . x||
+        ||_.-._||
+        `--)-(--`
+       __[=== o]___
+      |:::::::::::|\n     `-=========-`()"
+      puts "I could not find what your looking for. Try list"
+      get_input
+    end
+end
+
+get_input
