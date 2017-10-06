@@ -20,6 +20,8 @@ puts '
 puts "What would you like to play!"
 puts "Use 'list' to display all commands"
 
+$failed_entrys = 0
+
 def input_safe?(input)
   methods = Methods.new
   begin
@@ -37,6 +39,9 @@ def get_input
   if input_safe?(input)
     get_input
   else
+    rage = Rage.new
+    $failed_entrys += 1
+    rage.run($failed_entrys)
     puts "
          _______
         |.-----.|
