@@ -2,6 +2,8 @@
 require_relative '../lib/methods.rb'
 require 'thread'
 
+puts "What Chu Doin' in my remote branch??"
+
 puts "Welcome to the Playground!"
 puts '
    +--------------+
