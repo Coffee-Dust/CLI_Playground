@@ -1,6 +1,11 @@
 #!/usr/bin/env ruby
+#Don't put anything about this line. Of course you knew that already
 require_relative '../lib/methods.rb'
 require 'thread'
+
+#-------------------------------#
+#Clone and use this branch!#
+#-------------------------------#
 
 puts "Welcome to the Playground!"
 puts '
